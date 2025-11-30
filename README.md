@@ -1,4 +1,16 @@
 # Setup
+```bash
+mkdir .ssh
+cd .ssh
+touch id_ed25519
+chmod 600 id_25519
+vi id_ed25519
+```
+```bash
+cp ~/config-linux/zshrc ~/.zshrc
+cp ~/config-linux/vimrc ~/.vimrc
+```
+Manually copy the rest
 ### Install zsh
 ```bash
 sudo apt install zsh
@@ -22,12 +34,14 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
 ### Install fnm and bun
 ```bash
 curl -o- https://fnm.vercel.app/install | bash
-fnm install --lts
 ```
 ```bash
 curl -fsSL https://bun.sh/install | bash
 ```
-
+Restart the terminal and run
+```
+fnm install --lts
+```
 ## Rofi config
 Set the following command as a shortcut in kde
 ```
@@ -60,4 +74,12 @@ curl -fLO https://github.com/ryanoasis/nerd-fonts/raw/HEAD/patched-fonts/FiraCod
 Refresh font cache
 ```bash
 fc-cache -fv
+```
+```
+sudo vim /etc/default/grub
+```
+Set these
+```
+GRUB_GFXMODE=1920x1080
+GRUB_TIMEOUT=20
 ```
